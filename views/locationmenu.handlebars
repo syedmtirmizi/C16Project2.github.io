@@ -1,0 +1,18 @@
+<h1 class="view-all-location">ALL LOCATIONS: </h1>
+<div class="each-card">
+  {{#each restaurants}}
+    <div class="close-location-card card stylecard card" style="width: 35rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> Restaurant Number: {{id}}</li>
+        </a>
+        <li class="list-group-item">Address: {{address}}</li>
+        <li class="list-group-item">City: {{city}}</li>
+        <li class="list-group-item">Phone Number:{{phone}}</li>
+        <li class="list-group-item">Email:{{email}}</li>
+        <li><a href="/dashboard/single-location-menu/{{id}}">Click to see full Menu</a></li>
+      </ul>
+    </div>
+    <br>
+  {{/each}}
+
+</div>

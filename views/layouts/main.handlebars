@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<section class="background">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        
+        <title>Hmbrgr-Hlpr</title>
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px- sticky-top p-3">
+        <a class="navbar-brand p-2" href="/">SUPER-HIP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto pl-2 ">
+            <a href="/dashboard" class="nav-item nav-link active">DASHBOARD</a>
+            <a href="/contact" class="nav-item nav-link">CONTACT</a>     
+                <div class="nav-item dropdown">
+                    <div class="nav-link dropdown-toggle" data-toggle="dropdown">LOCATION</div>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a href="/location/Toronto" class="dropdown-item">Toronto</a>
+                        <a href="/location/Mississauga" class="dropdown-item">Mississauga</a>
+                        <a href="/location/Milton" class="dropdown-item">Milton</a>
+                        <a href="/location/London" class="dropdown-item">London</a>
+                    </div>
+                </div>
+          </ul>
+          <div class="form-inline my-2 my-lg-0 pl-2">
+            {{#if loggedIn}}
+            <button id="logout" class="btn-no-style">LOGOUT</button> 
+            {{else}}
+            <a href="/login" class="nav-item nav-link">LOGIN</a>
+            {{/if}} 
+          </div>
+        </div>
+      </nav>
+
+      {{{body}}}
+
+      
+      <footer class="bg-light text-center text-lg-start fixed-bottom">
+        <div class="text-center">
+          <h6>&copy;2021 Project 8 Team Ltd. All rights reserved</h6>
+        </div>
+      </footer>
+      {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>  
+      {{/if}}
+    </body>
+</section>
+
+</html>

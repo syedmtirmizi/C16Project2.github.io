@@ -1,0 +1,21 @@
+<h1> you are now in the menu page</h1>
+<h3> Menu Items</h3>
+<ol class="menu-list">
+  {{#each menuItems as |menuItems|}}
+  <li>
+    <article class="menu">
+      <div class="title">
+        <span>Menu Item: {{description}}</span>
+      </div>
+      <div class="meta">
+        Description: {{ingredients}} 
+        price: ${{price}} available
+        at
+        Store Number: {{location}}
+      </div>
+    </article>
+  </li>
+  {{/each}}
+</ol>
+
+<script src="/javascript/updatemenu.js"></script>

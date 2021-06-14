@@ -1,0 +1,68 @@
+
+<div class="container border border-dark p-3 rounded menu-list mt-5 p-2">
+    <h3 class="text-center">Menu Items</h3>
+
+    <div class="row border border-dark p-2 mb-1 rounded-top d-flex text-center">
+
+        <div class="col col-md-2">
+            Menu Item
+        </div>
+        <div class="col col-md-6">
+            Description
+        </div>
+        <div class="col col-md">
+            Price
+        </div>
+        <div class="col col-md">
+            Available@
+        </div>
+        <div class="col col-md-1">
+            Update
+        </div>
+    </div>
+    <!-- insert each menu list -->
+    {{#each menu as |menu|}}
+    <div class="row border border-warning p-1 mt-1 menu-list d-flex text-center">
+
+        <div class="col-lg-2">
+            {{description}}
+            </div>
+        <div class="col-lg-6">
+            {{ingredients}}
+        </div>
+        <div class="col-lg">
+            ${{price}}
+        </div>
+        <div class="col-lg">
+            {{location}}
+        </div>
+        <div class="col-lg-1">
+            <button type="button" class="btn btn-outline-danger btn-sm"><a href="/dashboard/edit/{{id}}">Modify</a></button>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+
+{{!-- 
+<h1> you are now in the menu page</h1>
+<h3> Menu Items</h3>
+<ol class="menu-list">
+  {{#each menu as |menu|}}
+  <li>
+    <article class="page">
+      <div class="title">
+        <span>Menu Item:{{description}}</span>
+      </div>
+      <div class="meta">
+        Description: {{ingredients}} 
+        price: ${{price}} available
+        at
+        Store Number: {{location}}
+
+<a href="/dashboard/edit/">Click to update or delete menu!</a> <br>
+</div>
+    </article>
+  </li>
+  {{/each}}
+</ol> --}}
